@@ -6,9 +6,9 @@ const manifestForPlugIn = {
   registerType:'prompt',
   includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest:{
-    name:"React-vite-app",
-    short_name:"react-vite-app",
-    description:"I am a simple vite app",
+    name:"NFC Demo",
+    short_name:"NFC Demo",
+    description:"A demo of NFC",
     icons:[{
       src: '/android-chrome-192x192.png',
       sizes:'192x192',

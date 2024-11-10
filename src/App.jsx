@@ -33,7 +33,7 @@ export default function App() {
       <div className="basis-1/4">
         <img
           className="w-full h-full object-cover"
-          src={data?.gif}
+          src={data?.gif || "http://via.placeholder.com/400x360"}
           alt="placeholder"
         />
       </div>

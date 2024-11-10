@@ -26,7 +26,7 @@ export default function App() {
       <div className="basis-3/4">
         <img
           className="w-full h-full object-cover"
-          src={data?.nfcToken}
+          src={data?.nfcToken || "http://via.placeholder.com/640x360"}
           alt="placeholder"
         />
       </div>

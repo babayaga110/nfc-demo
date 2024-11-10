@@ -25,8 +25,8 @@ export default function App() {
     >
       <div className="basis-3/4">
         <img
-          className="w-full h-full object-cover"
-          src={data?.nfcToken || "http://via.placeholder.com/640x360"}
+          className="w-full h-full object-contain"
+          src={data?.nfcToken || "https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d"}
           alt="placeholder"
         />
       </div>

@@ -24,7 +24,7 @@ export default function App() {
       className="flex justify-content-center align-items-center"
       style={{ height: "calc(100vh - 50px)" }}
     >
-      <div className={["basis-3/4 border border-[5px]" , data?.aviable ? "border-green-500": "bottom-red-500"]}>
+      <div className={["basis-3/4 border border-[5px]" , data?.available ? "border-green-500": "bottom-red-500"]}>
         <img
           className="w-full h-full object-contain"
           src={data?.nfcToken || "https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d"}

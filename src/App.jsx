@@ -13,6 +13,7 @@ export default function App() {
           id: doc.id,
         }));
         setData(data[0]);
+        console.log(data[0]);
       }
     );
     return () => unsubscribe();
@@ -21,9 +22,9 @@ export default function App() {
   return (
     <div
       className="flex justify-content-center align-items-center"
-      style={{ height: "100vh" }}
+      style={{ height: "calc(100vh - 50px)" }}
     >
-      <div className="basis-3/4">
+      <div className={["basis-3/4 border border-[5px]" , data?.aviable ? "border-green-500": "bottom-red-500"]}>
         <img
           className="w-full h-full object-contain"
           src={data?.nfcToken || "https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d"}
@@ -37,7 +38,7 @@ export default function App() {
           alt="placeholder"
         />
       </div>
-      <div className="bg-[#F5EDED] w-full py-2 fixed bottom-0">
+      <div className="bg-[#F5EDED] w-full h-[50px] fixed bottom-0 flex items-center">
         <Marquee>
           <p className="text-2xl font-bold text-gray-800">
             Welcome to Hospital

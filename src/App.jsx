@@ -24,11 +24,21 @@ export default function App() {
       className="flex justify-content-center align-items-center"
       style={{ height: "calc(100vh - 50px)" }}
     >
-    <div className={`basis-3/4 border border-[5px] ${data?.available ? "border-green-500" : "border-red-500"}`}>
-
+      <div
+        className={`relative basis-3/4  border-t-[10px] border-b-[10px] ${
+          data?.available ? "border-green-500" : "border-red-600"
+        }`}
+      >
+        <div className="absolute top-2 right-2 bg-red-600 text-white w-fit h-fit font-bold z-10 ">
+          <p className="bg-red-600 py-2 px-3 shadow-md"> Doctor on Duty</p>
+          <span className="absolute top-1 -right-1 w-full h-full bg-black -z-10 shadow-md"></span>
+        </div>
         <img
           className="w-full h-full object-contain"
-          src={data?.nfcToken || "https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d"}
+          src={
+            data?.nfcToken ||
+            "https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d"
+          }
           alt="placeholder"
         />
       </div>

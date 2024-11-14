@@ -30,8 +30,8 @@ export default function App() {
         }`}
       >
         <div className="absolute top-2 right-2 bg-red-600 text-white w-fit h-fit font-bold z-10 ">
-          <p className="bg-red-600 py-2 px-3 shadow-md"> Doctor on Duty</p>
-          <span className="absolute top-1 -right-1 w-full h-full bg-black -z-10 shadow-md"></span>
+          <p className={`py-2 px-3 shadow-md ${data?.available ?"bg-green-600" :"bg-red-600"}`}> Doctor on Duty</p>
+          <span className={`absolute top-1 -right-1 w-full h-full -z-10 shadow-md ${data?.available ? "bg-green-300": "bg-red-300"}`}></span>
         </div>
         <img
           className="w-full h-full object-contain"

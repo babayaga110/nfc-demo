@@ -29,13 +29,13 @@ export default function App() {
             data?.available ? "border-green-500" : "border-red-600"
           }`}
         >
-          <div className="absolute -top-[60px] right-0  text-white w-fit h-fit font-bold z-10">
+          <div className="absolute -top-[70px] right-0  text-white w-fit h-fit font-bold z-10">
             <Player
               autoplay={true}
               loop={true}
               controls={false}
               src={data?.available ? "/unavailable.json" : "/available.json"}
-              style={{ height: "200px", width: "200px" ,padding:0 }}
+              style={{ height: "250px", width: "250px" ,padding:0 }}
             />
           </div>
           {/* <img

@@ -3,6 +3,7 @@ import { db_firestore } from "./firebase/config";
 import { collection, onSnapshot } from "firebase/firestore";
 import Marquee from "react-fast-marquee";
 import Template from "./Template";
+import { Player } from "@lottiefiles/react-lottie-player";
 export default function App() {
   const [data, setData] = React.useState({});
   React.useEffect(() => {
@@ -21,29 +22,21 @@ export default function App() {
   }, []);
 
   return (
-    <div  style={{ height: "100vh" }} >
-      <div
-        className="flex justify-content-center align-items-center w-full h-[calc(100vh-50px)]"
-      >
+    <div style={{ height: "100vh" }}>
+      <div className="flex justify-content-center align-items-center w-full h-[calc(100vh-50px)]">
         <div
           className={`relative basis-3/4  border-t-[10px] border-b-[10px] ${
             data?.available ? "border-green-500" : "border-red-600"
           }`}
         >
-          <div className="absolute top-2 right-2 bg-red-600 text-white w-fit h-fit font-bold z-10 ">
-            {data?.available ? (
-              <p className="py-2 px-3 shadow-md bg-green-600">
-                Doctor available
-              </p>
-            ) : (
-              <p className="py-2 px-3 shadow-md bg-red-600">Doctor on Duty</p>
-            )}
-
-            <span
-              className={`absolute top-1 -right-1 w-full h-full -z-10 shadow-md ${
-                data?.available ? "bg-green-300" : "bg-red-300"
-              }`}
-            ></span>
+          <div className="absolute -top-[60px] right-0  text-white w-fit h-fit font-bold z-10">
+            <Player
+              autoplay={true}
+              loop={true}
+              controls={false}
+              src={data?.available ? "/unavailable.json" : "/available.json"}
+              style={{ height: "200px", width: "200px" ,padding:0 }}
+            />
           </div>
           {/* <img
           className="w-full h-full object-contain"
@@ -63,7 +56,7 @@ export default function App() {
       <div className="bg-[#F5EDED] w-full h-[50px]  flex items-center">
         <Marquee>
           <p className="text-2xl font-bold text-gray-800 uppercase ">
-          Welcome to Dr. Soliman Fakeeh Hospital
+            Welcome to Dr. Soliman Fakeeh Hospital
           </p>
         </Marquee>
       </div>

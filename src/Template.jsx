@@ -11,17 +11,17 @@ export default function Template({
           className="w-full h-auto object-contain "
         />
         <div className="w-full px-1  md:p-5">
-          <h4 className="font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl mb-2">
+          <h4 className="font-bold text-gray-600 text-2xl md:text-3xl lg:text-2xl mb-2">
             {doctor?.inputName}
           </h4>
-          <h4 className="font-bold text-gray-600 text-2xl md:text-3xl lg:text-3xl mb-2">
+          <h4 className="font-bold text-gray-600 text-2xl md:text-3xl lg:text-2xl mb-2">
             {doctor?.name?.ar}
           </h4>
           <hr className="w-full border-1 border-gray-300 mb-2 md:mb-5 " />
-          <p className="font-normal text-gray-400 text-xl md:text-2xl lg:text-2xl">
+          <p className="font-normal text-gray-400 text-xl md:text-xl lg:text-lg">
             {doctor?.inputDesc}
           </p>
-          <p className="font-normal text-gray-400 text-xl md:text-2xl lg:text-2xl">
+          <p className="font-normal text-gray-400 text-xl md:text-xl lg:text-lg">
             {doctor?.designation?.ar}
           </p>
         </div>

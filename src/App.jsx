@@ -62,8 +62,8 @@ export default function App() {
       </div>
       <div className="bg-[#F5EDED] w-full h-[50px]  flex items-center">
         <Marquee>
-          <p className="text-2xl font-bold text-gray-800">
-            Welcome to Hospital
+          <p className="text-2xl font-bold text-gray-800 uppercase ">
+          Welcome to Dr. Soliman Fakeeh Hospital
           </p>
         </Marquee>
       </div>

@@ -29,8 +29,8 @@ export default function Template({
 
       <div className="w-[65%] bg-[#f99816] p-3 rounded-bl-[500px] flex justify-center items-center overflow-hidden">
         <img
-          // src={doctor?.image}
-          src="https://avatars.githubusercontent.com/u/25135837?v=4"
+          src={doctor?.image}
+          // src="https://avatars.githubusercontent.com/u/25135837?v=4"
           alt="logo"
           className="rounded-full object-cover"
           style={{

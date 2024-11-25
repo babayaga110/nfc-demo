@@ -25,30 +25,30 @@ export default function App() {
     <div style={{ height: "100vh" }}>
       <div className="flex justify-content-center align-items-center w-full h-[calc(100vh-50px)]">
         {data?.show ? (
-        <div
-          className={`relative basis-3/4  border-t-[10px] border-b-[10px] ${
-            data?.available ? "border-green-500" : "border-red-600"
-          }`}
-        >
-          <div className="absolute -top-[70px] right-0  text-white w-fit h-fit font-bold z-10">
-            <Player
-              autoplay={true}
-              loop={true}
-              controls={false}
-              src={data?.available ? "/unavailable.json" : "/available.json"}
-              style={{ height: "250px", width: "250px", padding: 0 }}
+          <div
+            className={`relative basis-3/4  border-t-[10px] border-b-[10px] ${
+              data?.available ? "border-green-500" : "border-red-600"
+            }`}
+          >
+            <div className="absolute -top-[70px] right-0  text-white w-fit h-fit font-bold z-10">
+              <Player
+                autoplay={true}
+                loop={true}
+                controls={false}
+                src={data?.available ? "/unavailable.json" : "/available.json"}
+                style={{ height: "250px", width: "250px", padding: 0 }}
+              />
+            </div>
+            <Template doctor={data} />
+          </div>
+        ) : (
+          <div className=" basis-3/4 ">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d  "
+              alt="placeholder"
+              className="w-full h-full object-cover"
             />
           </div>
-          <Template doctor={data} />
-        </div>
-        ) : (
-        <div className=" basis-3/4 ">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/nfc-demo-d3f3b.firebasestorage.app/o/2022-11-27.jpg?alt=media&token=9e293a52-de74-4584-ba33-a4a34ccb189d  "
-          alt="placeholder"
-          className="w-full h-full object-cover"
-        />
-        </div>
         )}
         <div className="basis-1/4">
           <img
@@ -61,7 +61,8 @@ export default function App() {
       <div className="bg-[#F5EDED] w-full h-[50px]  flex items-center">
         <Marquee>
           <p className="text-2xl font-bold text-gray-800 uppercase ">
-              مرحباً بكم في مستشفى الدكتور سليمان فقيه {"       "} Welcome to Dr. Soliman Fakeeh Hospital
+            <span className="mr-2"> مرحباً بكم في مستشفى الدكتور سليمان فقيه </span>
+            <span>Welcome to Dr. Soliman Fakeeh Hospital</span>
           </p>
         </Marquee>
       </div>
